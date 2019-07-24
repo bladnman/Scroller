@@ -1,0 +1,57 @@
+:root {
+  --thb__width: 0.3em;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.menuArea {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+}
+.scrollingIndicator {
+  font-size: 3em;
+}
+.toolbar {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.3em;
+}
+.toolLabel {
+  font-size: 0.8em;
+}
+.appBody {
+  margin-top: 20em;
+  text-align: left;
+}
+.thoughtBlock {
+  padding: 0.1em 0.7em;
+}
+.isSelected {
+  position: relative;
+  background: #e9e9e9;
+  background: green;
+  color: white;
+}
+.isSelected:after {
+  border: 1px solid green;
+  z-index: 100;
+  content: "";
+  border: var(--thb__width) solid green;
+  position: absolute;
+  top: calc(-1 * var(--thb__width));
+  left: calc(-1 * var(--thb__width));
+  right: calc(-1 * var(--thb__width));
+  bottom: calc(-1 * var(--thb__width));
+}
